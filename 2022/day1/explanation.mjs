@@ -8,8 +8,9 @@ let highest = [];
 let sum = 0;
 
 input.forEach((string) => {
-	// check if we have a blank line
-	if (string === "") {
+	// check if we have a blank line. we have to trim it because else on windows, \r would be
+	// contained in the string. therefore, we have to remove this aswell.
+	if (string.trim() === "") {
 		// we push our sum on the highest values stack. then we sort this stack from the lowest
 		// to the highest and reverse it to have the highest in the front. then we slice it up
 		// so we have the 3 highest sums.

@@ -5,7 +5,7 @@ let highest = [];
 let sum = 0;
 
 input.forEach((string) => {
-	if (string === "") {
+	if (string.trim() === "") {
 		highest.push(sum);
 		highest = highest.sort().reverse().slice(0, 3);
 
